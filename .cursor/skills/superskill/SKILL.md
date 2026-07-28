@@ -33,8 +33,8 @@ No match: stay on `change.md` and note why in the todolist. `ship-check.md` also
 |---|---|---|
 | Map the surface | `explore` (parallel, one question each) | Parent model OK; return paths + short findings, never pasted source |
 | Plan race | `generalPurpose` ×2 | `claude-opus-5-thinking-high-fast` and `gpt-5.6-sol-max` (Zynga-approved; no Fable/Grok) |
-| Plan audit | `plan-auditor` | Blocks implementation until clean |
-| Implementation | `generalPurpose` | Named file-path scope; lead reviews the diff |
+| Plan audit | `plan-auditor` | `cursor-grok-4.5-fast`; blocks implementation until clean |
+| Implementation | `generalPurpose` | `cursor-grok-4.5-fast`; named file-path scope; lead reviews the diff |
 | Ship check | `bugbot` + `security-review` + `shell` | In parallel; per [playbooks/ship-check.md](playbooks/ship-check.md) |
 
 ## Principles

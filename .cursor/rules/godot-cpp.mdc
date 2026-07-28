@@ -22,3 +22,6 @@ globs: core/**,doc/classes/**,tests/**
 - Rebuild after C++ changes before claiming anything works.
 - Verify with a headless binding check (`--headless --script`), not just a successful compile.
 - Call out anything that still needs eyes in the running editor in the final response.
+
+# General rules
+- Never reference a demo or answer-key branch
