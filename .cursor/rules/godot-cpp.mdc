@@ -1,0 +1,24 @@
+---
+description: Godot core C++ conventions — bound global APIs, build, and verification
+globs: core/**,doc/classes/**,tests/**
+---
+
+# Project setup
+
+- Godot 4 source. Build: `scons -j14 target=editor tests=yes vulkan=no accesskit=no angle=no`
+- Headless tests: `./bin/godot.macos.editor.arm64 --headless --test`
+- MoltenVK is not installed on this machine; Metal is enough. Never switch to `vulkan=yes`.
+
+# Architecture — bound global APIs
+
+- Implementation: `core/math/math_funcs.h` — follow `smoothstep` as the canonical pattern.
+- Binding: `core/variant/variant_utility.h` + `core/variant/variant_utility.cpp` (`register_utility_function`).
+- Docs: `doc/classes/@GlobalScope.xml` — keep entries alphabetical like their neighbors.
+- Tests: `tests/core/math/test_math_funcs.cpp`.
+- A new global function touches all four surfaces in one change. No partial landings.
+
+# Workflow
+
+- Rebuild after C++ changes before claiming anything works.
+- Verify with a headless binding check (`--headless --script`), not just a successful compile.
+- Call out anything that still needs eyes in the running editor in the final response.
