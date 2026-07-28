@@ -381,6 +381,14 @@
 				See also [method smoothstep]. If you need to perform more advanced transitions, use [method Tween.interpolate_value].
 			</description>
 		</method>
+		<method name="elastic_out">
+			<return type="float" />
+			<param index="0" name="x" type="float" />
+			<description>
+				Maps a normalized [param x] in the range [code][0, 1][/code] with an elastic ease-out curve (overshoot then settle). Values outside that range are clamped to the endpoints. Mid-curve values may exceed [code]1[/code].
+				See also [method ease] and [method smoothstep].
+			</description>
+		</method>
 		<method name="error_string">
 			<return type="String" />
 			<param index="0" name="error" type="int" />

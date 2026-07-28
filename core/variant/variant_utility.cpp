@@ -364,6 +364,10 @@ double VariantUtilityFunctions::ease(double p_x, double p_curve) {
 	return Math::ease(p_x, p_curve);
 }
 
+double VariantUtilityFunctions::elastic_out(double p_x) {
+	return Math::elastic_out(p_x);
+}
+
 int VariantUtilityFunctions::step_decimals(double p_step) {
 	return Math::step_decimals(p_step);
 }
@@ -1688,6 +1692,7 @@ void Variant::_register_variant_utility_functions() {
 	FUNCBINDR(is_finite, sarray("x"), Variant::UTILITY_FUNC_TYPE_MATH);
 
 	FUNCBINDR(ease, sarray("x", "curve"), Variant::UTILITY_FUNC_TYPE_MATH);
+	FUNCBINDR(elastic_out, sarray("x"), Variant::UTILITY_FUNC_TYPE_MATH);
 	FUNCBINDR(step_decimals, sarray("x"), Variant::UTILITY_FUNC_TYPE_MATH);
 
 	FUNCBINDVR3(lerp, sarray("from", "to", "weight"), Variant::UTILITY_FUNC_TYPE_MATH);
