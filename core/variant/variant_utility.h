@@ -75,6 +75,7 @@ struct VariantUtilityFunctions {
 	static bool is_zero_approx(double p_x);
 	static bool is_finite(double p_x);
 	static double ease(double p_x, double p_curve);
+	static double elastic_out(double p_x);
 	static int step_decimals(double p_step);
 	static Variant snapped(const Variant &p_x, const Variant &p_step, Callable::CallError &r_error);
 	static double snappedf(double p_x, double p_step);
